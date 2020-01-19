@@ -9,51 +9,63 @@
 			"name": "Registration",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "formdata",
 					"formdata": [
 						{
 							"key": "first_name",
-							"value": "test",
+							"value": "zxc",
 							"type": "text"
 						},
 						{
 							"key": "last_name",
-							"value": "user",
+							"value": "zxc",
 							"type": "text"
 						},
 						{
 							"key": "phone",
-							"value": "+628123",
+							"value": "+6285612344320",
 							"type": "text"
 						},
 						{
 							"key": "email",
-							"value": "test@mail.com",
+							"value": "zxc@mail.com",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "123456",
-							"type": "text"
-						},
-						{
-							"key": "password_confirmation",
-							"value": "123456",
+							"value": "123123",
 							"type": "text"
 						},
 						{
 							"key": "date_of_birth",
-							"value": "13131",
+							"value": "1990-09-09",
 							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "Male",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
 						}
 					]
 				},
 				"url": {
-					"raw": "{{base_url}}/api/relog/register",
+					"raw": "{{base_url}}public/api/relog/register",
 					"host": [
-						"{{base_url}}"
+						"{{base_url}}public"
 					],
 					"path": [
 						"api",
@@ -68,26 +80,26 @@
 			"name": "Login",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "email",
-							"value": "test@mail.com",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "123456",
-							"type": "text"
-						}
-					]
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"asd@mail.com\",\n\t\"password\": \"123123\"\n}"
 				},
 				"url": {
-					"raw": "{{base_url}}/api/relog/login",
+					"raw": "{{base_url}}public/api/relog/login",
 					"host": [
-						"{{base_url}}"
+						"{{base_url}}public"
 					],
 					"path": [
 						"api",
@@ -115,9 +127,9 @@
 					}
 				],
 				"url": {
-					"raw": "{{base_url}}/api/relog/getUser",
+					"raw": "{{base_url}}public/api/relog/getUser",
 					"host": [
-						"{{base_url}}"
+						"{{base_url}}public"
 					],
 					"path": [
 						"api",
